@@ -13,7 +13,7 @@ body {
     background-color: #1B143F;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    scroll-snap-type: y mandatory;
 }
 
 /*====================LOGO IMAGE============================*/
@@ -81,9 +81,8 @@ a {
 
 main {
     height: 100vh;
-    overflow-y: scroll;
+   /* overflow-y: scroll;*/
     /*scroll-snap-type: y mandatory;*/
-    
 
 }
 /*==================NAVIGATION FOR MOBILE DEVICES=============*/
@@ -494,12 +493,14 @@ main {
     border: solid 1px transparent;
     border-radius: 1.875rem;
     background-color: #2D2752;
-    margin-bottom: 7.3rem;
+    margin: 0 auto;
+    margin-top: 4.3rem;
 }
 
 .testimonial-details-flex{
     display: flex;
     column-gap: 0.75rem;
+    
 
 }
 
@@ -571,33 +572,50 @@ main {
 }
 
 /*=========================footer===========================*/
+.footer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.72rem;
+}
 
-.footer-container{
-    background-color: rgba(64, 58, 101, 0.50);
+.footer-container{ 
+    margin-inline: 2.5rem;
+    padding-top: 5.56rem;
       
 }
 
-.footer-details{
-    margin-inline: 2.5rem;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.footer-flex_section{
-    display: flex;
-    column-gap: 19.31px;
-}
-
-.footer-summary{
+.footer-content-items{
     display: flex;
     flex-direction: column;
-    row-gap: 3.42rem;
+    row-gap: 3.8rem;
 }
 
-.footer-links{
+.footer-container{
+    display: flex;
+    column-gap: 4.8rem;
+}
+
+.footer-link{
     display: flex;
     flex-direction: column;
-    row-gap: 2.38rem;
+    row-gap: 0.4rem;
+}
+
+.footer-link-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    
+}
+
+.footer-link-list a {
+    color: #ddd;
+    font-family: 'Montserrat';
+    font-size: 0.725rem;
+    font-weight: 400;
+    line-height: 1.75rem; /* 155.556% */
+    
 }
 
 .footer-header{
@@ -608,21 +626,40 @@ main {
     line-height: 1.625rem; /* 72.222% */
 }
 
-.footer-content-text{
+.footer-summary{
     color: #FFF;
     font-family: 'Montserrat';
     font-size: 1.125rem;
     font-weight: 300;
-    width: 29.8125rem;
+    width: 28.8125rem;
     line-height: 1.75rem; /* 155.556% */
 }
 
-/*footer image*/
-/*.teamMembers img {
+.footer-link h5,
+.developer-socials h5 {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.5rem; /* 96% */
+    
+}
+
+/*footer developer socials*/
+
+.developer-socials{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+}
+
+
+.developer-socials img {
     width: 40%;
     border-radius: 8px;
 }
 
+/*footer drop down button*/
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -667,13 +704,13 @@ main {
 
 /*team_member form*/
 
-/*.footer-form_contact{
+.footer-form_contact{
     border: solid 2px #fff;
     border-radius: 8px;
-    padding: 10px 18px;
+    padding: 25px 20px;
     position: relative;
-    right: 27%;
-      
+    right: 10%;
+         
 }
 
 
@@ -705,6 +742,7 @@ textarea{
     padding: 10px 12px;
     margin-bottom: 0.7rem;
     outline: none;
+    width: 100%;
 }
 input[type=submit]{
     width: 100%;
@@ -722,7 +760,41 @@ input[type=submit]:hover{
     font-size: 17px;
     font-weight: 400;
     cursor: pointer;
-}*/
+}
+
+/* footer line and socials images*/
+.footer-line-img {
+    width: 91rem;
+    margin: 0 auto;
+}
+
+.scissors-img{
+    margin: 0 auto;
+    margin-top: -3.3rem;
+}
+
+.socials-footer-icons{
+    margin-inline: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-icons{
+    display: inline-flex;
+    column-gap: 0.2rem;
+}
+
+.socials-footer-icons p {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem; 
+}
+
+
+
+
 
 
 /* for small device */

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kelvinator</title>
+    <!--==============================Favicon==========================================-->
+    <link rel="icon" href="/Asset/images/247.jpg">
     <!--=========================-CSS FOLDER==========================================--->
     <link rel="stylesheet" href="/Asset/CSS/style.css">
 </head>
@@ -27,12 +29,16 @@
                     </li>
 
                     <li class="nav__items">
-                        <a href="#courses" class="nav__link">Contact</a>
+                        <a href="#courses" class="nav__link">Courses</a>
                     </li>
 
                     <li class="nav__items">
-                        <a href="#" class="nav__link" id="showRadioForm" onclick="openForm2()">Test</a>
+                        <a href="#contact" class="nav__link">Contact</a>
                     </li>
+
+                    <!--<li class="nav__items">
+                        <a href="#" class="nav__link" id="showRadioForm" onclick="openForm2()">Test</a>
+                    </li>-->
                 </ul>
 
                 <div class="nav__button" id="nav-button">
@@ -176,7 +182,7 @@
     
                         <div class="flex__course">
                             <div class="course__logo">
-                                <img src="Asset/images/cloud-data-storage-rack-concept-glass-cube-cloudscape-digital-metaverse-server-global-network-business-web-database-backup-computer-private-infrastructure-technology 1.png" alt="hacker image" class="course-outline__img">   
+                                <img src="Asset/images/cloud-data-storage-rack-glopng" alt="hacker image" class="course-outline__img">   
                             </div>
                             <div class="course__info">
                                 <span class="course-price">$300</span>
@@ -350,29 +356,32 @@
                 </div>
             </div>
         </section>
-    </main>
-    
-    <footer id="footerContainer" class="footer-container">
-        <div class="footer-details">
-            <div class="footer-content">
-                <div class="footer-flex_section">
-                    <div class="footer-summary">
-                        <h2 class="footer-header">Kelvinator</h2>
-                        <p class="footer-content-text">
-                            At Kelvinator, we believe through collaboration, passion and grit, our instructors nourished with experience and proven track record are here to ensure your learning path creates a lasting curve to success. 
-                        </p>
-                    </div>
 
-                    <div class="footer-links">
-                        <p>Quick Link</p>
-                        <a href="">Home</a>
-                        <a href="">Library</a>
-                        <a href="">Test</a>
+        <section class="footer">
+            <div class="footer-container">
+                <div class="footer-content-items">
+                    <h3 class="footer-header" id="contact">kelvinator</h3>
+                    <p class="footer-summary">
+                        At Kelvinator, we believe through collaboration, passion and grit, our instructors nourished with experience 
+                        and proven track record are here to ensure your learning path creates a lasting curve to success. 
+                    </p>
+                </div>
+
+                <div class="footer-link">
+                    <h5>Quick Link</h5>
+                    <div class="footer-link-list">
+                        <a href="#home">Home</a>
+                        <a href="#courses">Courses</a>
+                        <a href="#library">Library</a>
                         <a href="">Login</a>
-                        <a href="">pop quiz</a>
+                        <a href="#" onclick="displayQuiz()">quiz</a>
                     </div>
-                    <!--footer image-->
-                    <img src="/image/5857.jpg" alt="avatar image">
+                </div>
+
+                <!--footer image-->
+                <div class="developer-socials">
+                    <h5>Developer</h5>
+                    <img src="Asset/images/5907.jpg" alt="avatar image">
                     <div class="dropdown">
                         <button class="dropbtn">Kelvin Nkwor</button>
                         <div class="dropdown-content">
@@ -385,34 +394,39 @@
 
                 <!--footer contact form-->
                 <div class="footer-form_contact">
-                <form action="#">
-                    <h1>Contribute to our upcoming Projects!</h1>
-                    <label for="">Name</label><br>
-                    <input type="text" id="name" placeholder="first, surname" required><br>
-                    <label for="">Email</label><br>
-                    <input type="text" id="email" placeholder="email address" required><br>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Message Here"></textarea><br>
-                    <input type="submit"> 
-                </form>
-            </div>
-            
-            <div class="footer-img-socials">
-                <img src="Asset/images/Line 5.png" alt="lines">
-                <img src="Asset/icons/Frame(2).png" alt="scissors">
-            </div>
-            <div class="contact-socials">
-                <p>Copyright 2024 | All Rights Reserved</p>
-                <div class="footer-social-icons">
-                    <img src="Asset/icons/behance.png" alt="behance icon">
-                    <img src="Asset/icons/instagram.png" alt="instagram icon">
-                    <img src="Asset/icons/facebook.png" alt="facebook icon">
+                    <form action="#">
+                        <h1>Contribute to our upcoming Projects!</h1>
+                        <label for="">Name</label><br>
+                        <input type="text" id="name" placeholder="first, surname" required><br>
+                        <label for="">Email</label><br>
+                        <input type="text" id="email" placeholder="email address" required><br>
+                        <textarea name="" id="" cols="30"  placeholder="Write Your Message Here"></textarea><br>
+                        <input type="submit"> 
+                    </form>
                 </div>
+    
             </div>
 
-            
-        </div>
-        
-    </footer>
+            <div class="footer-copywrite-socials">
+                <div class="footer-line">
+                    <img src="Asset/images/Line 5.png" class="footer-line-img" alt="horizontal line">
+                    <img src="Asset/icons/Frame(2).png" class="scissors-img" alt="scissors image">
+                </div>
+                <div class="socials-footer-icons">
+                    <p>Copyright 2023 | All Rights Reserved</p>
+                    <div class="footer-social-icons">
+                        <img src="Asset/icons/behance.png" alt="behance icon">
+                        <img src="Asset/icons/instagram.png" alt="instagram icon">
+                        <img src="Asset/icons/facebook.png" alt="facebook icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    
     
     <script src="Asset/JS/main.js"></script>
 </body>
