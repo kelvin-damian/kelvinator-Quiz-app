@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--=========================-CSS FOLDER==========================================--->
+    <link rel="stylesheet" href="/Asset/CSS/style.css">
+</head>
+<body>
+    <!--=================================HEADER=========================================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="/Asset/images/247.jpg" alt="quiz-logo">
+                <h1 class="nav__headings">Kelvinator</h1><sup>TM</sup>
+            </a>
+
+            <div class="nav__menu show-menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__items">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+
+                    <li class="nav__items">
+                        <a href="#library" class="nav__link">Library</a>
+                    </li>
+
+                    <li class="nav__items">
+                        <a href="#courses" class="nav__link">Contact</a>
+                    </li>
+
+                    <li class="nav__items">
+                        <a href="#" class="nav__link" id="showRadioForm" onclick="openForm2()">Test</a>
+                    </li>
+                </ul>
+
+                <div class="nav__button" id="nav-button">
+                    <a href="#" class="nav__button-link" id="showForm" onclick="openform()">Login</a>
+                    <a href="#" onclick="displayQuiz()" class="nav__button-ghost" >Pop Quiz</a>
+                </div>
+
+                <!---==================The form===========================-->
+                <div class="form__popup" id="myForm">
+                    <form action="" class="form__container">
+                        <h3>Welcome fellow quiz taker</h3>
+                        <label for="email">Email</label><br>
+                        <input type="text" placeholder="email" name="email" required><br>
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter password" name="psw" required>
+                        <button type="submit" class="btn">Login</button><br>
+                        <button type="button" class=" btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+
+                </div>
+                <!---=================The Radio form Test=====================--->
+                <div class="form__popup2" id="myForm2">
+                    <form action="" class="form__container">
+                        <h3>Select your subject of interest</h3>
+                        <div class="flexRadio-container">
+                            <label for="">
+                                <input type="radio" name="page" value="page1" id="page1"> Mathemetics
+                            </label>
+                            <label for="">
+                                <input type="radio" name="page" value="page2" id="page2"> General Knowledge
+                            </label>
+                            <label for="">
+                                <input type="radio" name="page" value="page3" id="page3"> Chemistry
+                            </label>
+                            <label for="">
+                                <input type="radio" name="page" value="page4" id="page4"> Biology
+                            </label>
+                            <label for="">
+                                <input type="radio" name="page" value="page5" id="page5"> Computer Science
+                            </label>
+                        </div> 
+                        <button type="submit" class="btn btnSubject" onclick="showPage()">Start Quiz</button><br>
+                        <button type="button" class=" btn cancel" onclick="closeForm2()">Close</button>
+                    </form>
+                </div>
+
+                <!--===============CLOSE BUTTON=============================-->
+                <div class="close__button" id="nav-close">
+                    <img src="Asset/icons/close_FILL0_wght400_GRAD0_opsz24.png" alt="close__button">
+                </div>  
+            </div>
+
+            <!--================TOGGLE BUTTON=============================-->
+            <div class="menu__button" id="menu-button">
+                <img src="Asset/icons/menu_FILL0_wght400_GRAD0_opsz24.png" alt="">
+            </div>
+        </nav>
+    </header>
+    <!--===========================MAIN======================================-->
+    <main class="main">
+        <!--========================HERO-HOME SECTION=============================-->
+        <section class="home">
+            <div id="home"  class="home__container container">
+                <div class="home__content">
+                    <div class="home__data">
+                        <h3 class="home__subtitle">
+                            Unleash your Inner Wizard of Wisdom
+                        </h3>
+                        
+                        <h1 class="home__title">
+                            Embark on a journey of knowledge exploration with our collection of interractive quizes
+                        </h1>
+
+                        <!--<p class="home__description">
+                            Take your test anytime anywhere without hassle and learn.
+                        </p>-->
+                        <div class="homeButton">
+                            <a href="" class="home__button" id="showGneralQuiz">
+                                Get Started
+                            </a>
+                            <a href="" class="home__button">
+                                Join as a student
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="home__image">
+                        <img src="Asset/images/Frame.png" alt="" class="home__image3">
+                        <img src="Asset/images/Frame(1).png" alt="arrow image" class="frame-arrow">
+                        <img src="Asset/images/Frame(3).png" alt="atom image">
+                        <img src="Asset/images/4908052_2556572 1.png" alt="Rocket image" class="rocket__img">
+                        <img src="Asset/images/Frame(2).png" alt="the world globe image" class="globe__img">
+                    </div>
+                   
+                </div>
+                
+            </div>
+        </section>
+
+        <!--============================Course Section==================================-->
+        <section id="courses" class="course__container">
+            <div class="course__details">
+                <div class="course-description">
+                    <h3 class="course__header">Join Kelvinator at its Best</h3>
+                    <h2>Featured Courses</h2>
+                    <img src="Asset/images/ruler.png" alt="ruler img" class="course__img">
+                </div>
+        <!--============================flexed course display==========================================-->
+                <div class="outline-course-flex">
+
+                    <div class="course__outline">
+                        <div class="flex__course">
+                            <div class="course__logo">
+                                <img src="Asset/images/matrix-hacker-background 1.png" alt="hacker image" class="course-outline__img">   
+                            </div>
+                            <div class="course__info">
+                                <span class="course-price">$240</span>
+                                <a href="#" class="course__outlook">Web Development</a>
+                                <p class="course__project">Project Based Learning: Using HTML, CSS, and Javascript</p>
+                                <div class="enrolled__students">
+                                   <p>5,900 students</p>
+                                   <p>12h 40m</p> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="flex__course">
+                            <div class="course__logo">
+                                <img src="Asset/images/ai-technology-microchip-background-digital-transformation-concept 1.png" alt="hacker image" class="course-outline__img">   
+                            </div>
+                            <div class="course__info">
+                                <span class="course-price">$340</span>
+                                <a href="#" class="course__outlook">Machine Learning</a>
+                                <p class="course__project">Project Based Learning: Tensor flow, PyTorch and Spark ML</p>
+                                <div class="enrolled__students">
+                                   <p>550 students</p>
+                                   <p>22h 40m</p> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="flex__course">
+                            <div class="course__logo">
+                                <img src="Asset/images/cloud-data-storage-rack-concept-glass-cube-cloudscape-digital-metaverse-server-global-network-business-web-database-backup-computer-private-infrastructure-technology 1.png" alt="hacker image" class="course-outline__img">   
+                            </div>
+                            <div class="course__info">
+                                <span class="course-price">$300</span>
+                                <a href="#" class="course__outlook">Cloud Computing</a>
+                                <p class="course__project">Project Based Learning: Docker, Smart platform, Ruby.....</p>
+                                <div class="enrolled__students">
+                                   <p>1000 students</p>
+                                   <p>22h 40m</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="course__outline">
+                        <div class="flex__course">
+                            <div class="course__logo">
+                                <img src="Asset/images/4.png.png" alt="digital marketer image" class="course-outline__img">   
+                            </div>
+                            <div class="course__info">
+                                <span class="course-price">$140</span>
+                                <a href="#" class="course__outlook">Digital Marketing</a>
+                                <p class="course__project">Project Based Learning: Social media marketing, SEO, and Email marketing</p>
+                                <div class="enrolled__students">
+                                   <p>1,200 students</p>
+                                   <p>10h 40m</p> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="flex__course">
+                            <div class="course__logo">
+                                <img src="Asset/images/5.png.png" alt="hacker image" class="course-outline__img">   
+                            </div>
+                            <div class="course__info">
+                                <span class="course-price">$340</span>
+                                <a href="#" class="course__outlook">Product Design</a>
+                                <p class="course__project">Project Based Learning: Different Product Case study research and Prototyping</p>
+                                <div class="enrolled__students">
+                                   <p>2,550 students</p>
+                                   <p>8h 40m</p> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="flex__course">
+                            <div class="course__logo">
+                                <img src="Asset/images/6.png.png" alt="hacker image" class="course-outline__img">   
+                            </div>
+                            <div class="course__info">
+                                <span class="course-price">$300</span>
+                                <a href="#" class="course__outlook">Human Resource Management</a>
+                                <p class="course__project">Project Based Learning: Organizational culture and behaviour</p>
+                                <div class="enrolled__students">
+                                   <p>1,850 students</p>
+                                   <p>22h 40m</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learn-more-button">
+                        <a href="#" class="learn-button">Learn More</a>
+                        <div class="learn-img">
+                            <img src="Asset/icons/Frame.png" alt="divider" class="star__img">
+                            <img src="Asset/icons/Frame(1).png" alt="star logo" class="divider-img">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="library" class="library-collection">
+            <div class="library-container">
+                <h2 class="library-description">Top Categories</h2>
+                <div class="library-flex-content">
+
+                    <div class="library-collection-container">
+                        <div class="library-details">
+                            <div class="library-summary-flex">
+                               <a href="" ><img src="Asset/icons/div.features-box-image-speaker.png" alt="speaker img"></a>
+                            </div>
+                            <div class="library_info">
+                                <a href="#" class="library_outline">Digital Marketing</a>
+                                <span>22 courses</span>
+                            </div>
+                        </div>
+    
+                        <div class="library-details">
+                            <div class="library-summary-flex">
+                                <a href=""><img src="Asset/icons/div.features-box-image-graphic.png" alt="speaker img">
+                            </div>
+                            <div class="library_info">
+                                <a href="#" class="library_outline">Graphic Design</a>
+                                <span>85 courses</span>
+                            </div>
+                        </div>
+    
+                        <div class="library-details">
+                            <div class="library-summary-flex">
+                                <img src="Asset/icons/div.features-box-image.png" alt="speaker img">
+                            </div>
+                            <div class="library_info">
+                                <a href="#" class="library_outline">Art & Humanities</a>
+                                <span>76 courses</span>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="library-collection-container">
+                        <div class="library-details">
+                            <div class="library-summary-flex">
+                               <a href="" ><img src="Asset/icons/div.features-box-image(1).png" alt="speaker img"></a>
+                            </div>
+                            <div class="library_info">
+                                <a href="#" class="library_outline">High school Sciences</a>
+                                <span>7 subjects</span>
+                            </div>
+                        </div>
+    
+                        <div class="library-details">
+                            <div class="library-summary-flex">
+                                <a href=""><img src="Asset/icons/div.features-box-image(2).png" alt="cube img">
+                            </div>
+                            <div class="library_info">
+                                <a href="#" class="library_outline">IT and Software</a>
+                                <span>110 courses</span>
+                            </div>
+                        </div>
+    
+                        <div class="library-details">
+                            <div class="library-summary-flex">
+                                <img src="Asset/icons/div.features-box-image(3).png" alt="computer img">
+                            </div>
+                            <div class="library_info">
+                                <a href="#" class="library_outline">Web Development</a>
+                                <span>16 courses</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <!--==========================Testimonial container========================================-->
+                <div class="testimonial-container">
+                    <div class="testimonial-details-flex">
+                        <div class="rocket-img">
+                            <img src="Asset/images/rocket-launch-laptop-flying-rocket-icon-business-startup-project-concept 2.png" alt="rocket laumch img">
+                        </div>
+                        <div class="testimonial-summary">
+                            <h5 class="testimonial-header">Testimonial</h5>
+                            <h2>what our students say?</h2>
+                            <div class="testimonial-img">
+                                <img src="Asset/icons/Option ⏵ 1.png.png" alt="passport photograph">
+                                <img src="Asset/icons/Option ⏵ 2.png.png" alt="passport photograph">
+                                <img src="Asset/icons/Option ⏵ 3.png.png" alt="passport photograph">
+                                <img src="Asset/icons/Option ⏵ 4.png.png" alt="passport photograph">
+                                <img src="Asset/icons/Option ⏵ 5.png.png" alt="passport photograph">
+                            </div>
+                            <h5 class="testimonial-name">Nkwor Kelvin Daniel</h5>
+                            <span>Fintrak's Software</span>
+                            <p class="testimonial-content">
+                                One ipsum dolor sit amet, elit, sed do eiusmod tempor ut labore et
+                                dolore magna aliqua. Quis ipsum ultrices gravida. Risus dolore
+                                magna aliqua. Quis ipsum ultrices gravida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footerContainer" class="footer-container">
+        <div class="footer-details">
+            <div class="footer-content">
+                <div class="footer-flex_section">
+                    <div class="footer-summary">
+                        <h2 class="footer-header">Kelvinator</h2>
+                        <p class="footer-content-text">
+                            At Kelvinator, we believe through collaboration, passion and grit, our instructors nourished with experience and proven track record are here to ensure your learning path creates a lasting curve to success. 
+                        </p>
+                    </div>
+
+                    <div class="footer-links">
+                        <p>Quick Link</p>
+                        <a href="">Home</a>
+                        <a href="">Library</a>
+                        <a href="">Test</a>
+                        <a href="">Login</a>
+                        <a href="">pop quiz</a>
+                    </div>
+                    <!--footer image-->
+                    <img src="/image/5857.jpg" alt="avatar image">
+                    <div class="dropdown">
+                        <button class="dropbtn">Kelvin Nkwor</button>
+                        <div class="dropdown-content">
+                            <a href="">Linkedin</a>
+                            <a href="">Github</a>
+                            <a href="">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer contact form-->
+                <div class="footer-form_contact">
+                <form action="#">
+                    <h1>Contribute to our upcoming Projects!</h1>
+                    <label for="">Name</label><br>
+                    <input type="text" id="name" placeholder="first, surname" required><br>
+                    <label for="">Email</label><br>
+                    <input type="text" id="email" placeholder="email address" required><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Message Here"></textarea><br>
+                    <input type="submit"> 
+                </form>
+            </div>
+            
+            <div class="footer-img-socials">
+                <img src="Asset/images/Line 5.png" alt="lines">
+                <img src="Asset/icons/Frame(2).png" alt="scissors">
+            </div>
+            <div class="contact-socials">
+                <p>Copyright 2024 | All Rights Reserved</p>
+                <div class="footer-social-icons">
+                    <img src="Asset/icons/behance.png" alt="behance icon">
+                    <img src="Asset/icons/instagram.png" alt="instagram icon">
+                    <img src="Asset/icons/facebook.png" alt="facebook icon">
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </footer>
+    
+    <script src="Asset/JS/main.js"></script>
+</body>
+</html>
+
+
+

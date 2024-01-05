@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Lato:ital,wght@0,100;1,100&family=Manrope:wght@300;400;500;700;800&family=Open+Sans:wght@300;400;500;700&family=Oswald:wght@200;300;400&family=Poppins:wght@300;500;700&family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+/*====================LOGO IMAGE============================*/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.nav__logo {
+    display: flex;
+    gap: 0.2rem;
+}
+
+
+
+/*=========================HEADER & NAV===============================*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: #75bcff;
+    z-index: 100;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo img {
+    width: 36px;
+}
+
+ul {
+    list-style: none;
+    color: #1a1b4b;
+}
+
+a {
+    text-decoration: none;
+}
+
+.close__button, .menu__button {
+    display: inline-flex;
+    font-size: 1.2rem;
+    color: #1a1b4b;
+    cursor: pointer;
+}
+
+  
+
+
+/*=======================CSS CLASSES============================*/
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+
+}
+
+main {
+    overflow: hidden;
+
+}
+/*==================NAVIGATION FOR MOBILE DEVICES=============*/
+@media screen and (max-width: 1023px){
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0%;
+        background-color: #75bcff;
+        width: 100%;
+        box-shadow: 0 1px 16px hsla(210, 55%, 24%, .1);
+        padding-block: 3.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        transition: top .4s;
+    }
+}
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 2rem; 
+}
+
+.nav__link {
+    color: #171e45;
+    transition: color .3s;
+}
+
+.nav__link:hover {
+    color: #ffff;
+}
+
+.nav__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .75rem;
+}
+
+.nav__button-link,
+.nav__button-ghost {
+    display: inline-block;
+    color: hsl(210, 24%, 15%);
+}
+
+.nav__button-ghost {
+    background-color: hsla(0, 0%, 100%, .3);
+    padding: 1rem 2.5rem;
+    border: solid 2px hsl(210, 53%, 20%);
+    border-radius: .75rem;
+}
+
+.close__button {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    
+}
+
+/*==============show menu===============*/
+.show-menu {
+   top: 0%; 
+}
+
+/* for small device */
+@media screen and (max-width: 305px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .home__subtitle{
+        font-size: 1rem;
+
+    }
+
+    .home__title {
+        font-size: 1.2rem;
+        width: 250.6px;
+        line-height: 2.3rem;
+        margin-top: 0.7rem;
+        color: #171e45;
+    }
+
+    .home__description{
+        font-size: 1.2rem;
+
+    }
+    .form__container{
+        width: 250px;
+        padding: 7px;
+    }
+    .form__container h3{
+        font-size: 0.3rem;
+        text-align: center;
+    }
+}
+
+/* for taller devices */
+@media screen and (min-width: 376px) and (min-height: 800px){
+    .home__container{
+        padding-top: 10rem;
+    }
+
+    .home__subtitle {
+        font-size: 0.7rem;
+        margin-bottom: 1.7rem;
+        font-weight: 700;
+    }
+
+    .home__title {
+        width: 375px;
+    }
+
+    
+}
+
+@media screen and (min-width: 375px) and (min-height: 800px){
+    .home__container{
+        padding-top: 10rem;
+    }
+
+    .home__subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 1.7rem;
+        font-weight: 700;
+    }
+
+    .home__title {
+        width: 375px;
+    }
+
+    
+}
+
+/*for medium device
+@media screen and (width: 480px){
+
+}*/
+
+/*for large devices*/
+@media screen and (min-width: 1023px){
+    .nav{
+        height: 5.5rem;
+        column-gap: 4rem;
+    }
+    .close__button,
+    .menu__button {
+        display: none;
+    }
+    .nav__menu{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-left: 3.0rem;   
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 5rem;
+    }
+    .nav__button{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+    .nav__logo img{
+        width: 50px;
+    }
+    .nav__logo h1,
+    .nav__logo sup{
+        margin-top: 0.5rem;
+        color: #171e45;
+    }
+    .home__content{
+        max-width: 550px;
+    }
+    .home__data{
+        row-gap: 1rem;
+    }
+    .home__title{
+        width: 610px;
+        line-height: 2.7rem;
+        font-weight: 500;
+    }
+}
+
+/*popup form*/
+.form__popup, 
+.form__popup2 {
+    display:none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 9;
+}
+
+.form__container
+{
+    max-width: 400px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #f1f1f1;
+    border-radius: 1rem;
+    
+}
+
+.form__container h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #75bcff;
+}
+
+.form__container input[type=text],
+.form__container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.form__container input[type=text]:focus,
+.form__container input[type=password]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+/*test Container*/
+.flexRadio-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+}
+
+/*submit button*/
+.form__container .btn {
+    background-color: #04aa6d;
+    color: #fff;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/*cnacle buton*/
+.form__container .cancel {
+    background-color: red;
+}
+
+.form__container .btn:hover {
+    outline: none;
+    opacity: 1;
+}
+
+/* quiz main body*/
+.classQuiz{
+    background-color: #fff;
+    min-height: 100vh;
+
+}
+
+/*quiz form*/
+.container__quiz{
+    background-color: #75bcff;
+    width: 90%;
+    max-width: 600px;
+    margin: 150px auto 0;
+    border-radius: 8px;
+    border: solid 1px transparent;
+    padding: 10px;  
+}
+
+.app__description h1 {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: solid 1px #fff;
+    padding-bottom: 30px;
+
+}
+
+.app__description h1,
+.app__description h2 {
+    color: #fff;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.app__description h2{
+    font-size: 18px;
+    font-weight: 500; 
+}
+
+/*quiz button*/
+.option__btn{
+    background-color: #fff;
+    color: #222;
+    font-weight: 400;
+    width: 100%;
+    border: solid 1px transparent;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 4px;
+    transition: all  0.3s;
+
+}
+.option__btn:hover:not([disabled]){
+    background-color: #000;
+    color: hsl(210, 19%, 84%);
+    outline: none;
+}
+.option__btn:disabled{
+    cursor: no-drop;
+}
+
+/* next button*/
+#next-btn{
+    background-color: #080a0e;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: none;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;    
+}
+
+#next-btn:hover{
+    background-color: #fff;
+    color: #222;
+}
+
+/* correct and incorrect answer style*/
+.correct{
+    background: #5045b8;
+}
+
+.incorrect {
+    background: #ff4500;
+}

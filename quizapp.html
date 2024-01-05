@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kelvinator Quiz App</title>
+    <link rel="stylesheet" href="/Asset/CSS/main.css">
+</head>
+<body>
+    <!--=================================HEADER=========================================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="/index.html" class="nav__logo">
+            <img src="/Asset/images/247.jpg" alt="quiz-logo">
+            <h1 class="nav__headings">Kelvinator</h1><sup>TM</sup>
+        </a>
+
+        <div class="nav__menu show-menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__items">
+                    <a href="#" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="#" class="nav__link">Library</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="#" class="nav__link">Courses</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="#" class="nav__link" id="showRadioForm" onclick="openForm2()">Test</a>
+                </li>
+            </ul>
+
+            <div class="nav__button" id="nav-button">
+                <a href="#" class="nav__button-link" id="showForm" onclick="openform()">Login</a>
+                <a href="#" class="nav__button-ghost">Get Started</a>
+            </div>
+
+            <!---==================The form===========================-->
+            <div class="form__popup" id="myForm">
+                <form action="" class="form__container">
+                    <h3>Welcome fellow quiz taker</h3>
+                    <label for="email">Email</label><br>
+                    <input type="text" placeholder="email" name="email" required><br>
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter password" name="psw" required>
+                    <button type="submit" class="btn">Login</button><br>
+                    <button type="button" class=" btn cancel" onclick="closeForm()">Close</button>
+                </form>
+
+            </div>
+            <!---=================The Radio form Test=====================--->
+            <div class="form__popup2" id="myForm2">
+                <form action="" class="form__container">
+                    <h3>Select your subject of interest</h3>
+                    <div class="flexRadio-container">
+                        <label for="">
+                            <input type="radio" name="page" value="page1" id="page1"> Mathemetics
+                        </label>
+                        <label for="">
+                            <input type="radio" name="page" value="page2" id="page2"> General Knowledge
+                        </label>
+                        <label for="">
+                            <input type="radio" name="page" value="page3" id="page3"> Chemistry
+                        </label>
+                        <label for="">
+                            <input type="radio" name="page" value="page4" id="page4"> Biology
+                        </label>
+                        <label for="">
+                            <input type="radio" name="page" value="page5" id="page5"> Computer Science
+                        </label>
+                    </div> 
+                    <button type="submit" class="btn btnSubject" onclick="showPage()">Start Quiz</button><br>
+                    <button type="button" class=" btn cancel" onclick="closeForm2()">Close</button>
+                </form>
+            </div>
+
+            <!--===============CLOSE BUTTON=============================-->
+            <div class="close__button" id="nav-close">
+                <img src="Asset/icons/close_FILL0_wght400_GRAD0_opsz24.png" alt="close__button">
+            </div>  
+        </div>
+
+        <!--================TOGGLE BUTTON=============================-->
+        <div class="menu__button" id="menu-button">
+            <img src="Asset/icons/menu_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </div>
+    </nav>
+</header>
+<main class="classQuiz">
+    <section class="container__quiz">
+        <div class="app__description">
+            <h1>kelvinator's general quiz</h1>
+            <div class="quiz">
+                <h2 id="question" class="question__title">Questions goes here</h2>
+                <div id="answer-buttons">
+                    <button class="option__btn btn">Answer 1</button>
+                    <button class="option__btn btn">Answer 2</button>
+                    <button class="option__btn btn">Answer 3</button>
+                    <button class="option__btn btn">Answer 4</button>
+                </div>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+
+
+    </section>
+</main>
+<script src="/Asset/JS/main.js"></script>
+</body>
+</html>
