@@ -75,12 +75,12 @@ a {
 /*=======================CSS CLASSES============================*/
 .container {
     max-width: 1120px;
-    margin-inline: 2.5rem;
+    margin: auto;
 
 }
 
 main {
-    height: 100vh;
+    /*height: 100vh;*/
    /* overflow-y: scroll;*/
     /*scroll-snap-type: y mandatory;*/
 
@@ -171,12 +171,15 @@ main {
 
 .home__content {
     position: relative;
-    z-index: 2;
+    z-index: 20;
 }
 
 .home__data {
-    display: grid;
-    row-gap: .5rem;   
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    z-index: 20;
+    position: relative;  
 }
 
 .home__subtitle {
@@ -187,14 +190,14 @@ main {
     letter-spacing: 3px;
     margin-bottom: 3.25px;
     font-family: 'Montserrat', sans-serif;
-    width: 74.5625rem;
+    max-width: 74.5625rem;
     text-align: center;
 }
 
 .home__title{
     font-size: 1.42rem;
     color: #fff;
-    width: 72.125rem;
+    max-width: 72.125rem;
     line-height: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -574,7 +577,7 @@ main {
 
 /*=========================footer===========================*/
 .footer{
-    min-height: 100vh;
+    
     display: flex;
     flex-direction: column;
     row-gap: 2.72rem;
@@ -883,22 +886,23 @@ input[type=submit]:hover{
 @media screen and (min-width: 1023px){
     .nav{
         height: 5.5rem;
-        column-gap: 4rem;
+        column-gap: 10px;
     }
     .close__button,
     .menu__button {
         display: none;
     }
     .nav__menu{
-     width: 100%;
+     
      display: flex;
      align-items: center;
-     justify-content: space-between;
-     padding-left: 8.7rem;   
+     justify-content: flex-end;
+        
     }
     .nav__list{
         flex-direction: row;
-        column-gap: 7rem;
+        column-gap: 84px;
+       
     }
     .nav__button{
         flex-direction: row;
@@ -914,7 +918,7 @@ input[type=submit]:hover{
         color: #fff;
     }
     .home__content{
-        max-width: 550px;
+        
     }
     .home__data{
         row-gap: 1rem;
